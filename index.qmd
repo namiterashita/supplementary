@@ -23,7 +23,7 @@ toc-depth: 5
 
 -->
 
-- Joural Article
+- Journal Article
     - 『의정논총』(73)
 
 - Conference Presentation

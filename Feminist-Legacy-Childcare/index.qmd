@@ -1,0 +1,121 @@
+---
+title: "Appendix : The Political Legacy of Feminist Movements on Childcare Policies"
+author: "Kazuhiro Terashita"
+institute: "Program-Specific Researcher, Kyoto University <br> JSPS Postdoctoral Research Fellow"
+date-modified: today
+link-external-newwindow: true
+---
+
+## Abstruct
+
+This study estimates the impact of past feminist movements on welfare policies in South Korea. It is well-established that major events such as disasters or military repression in history have lasting social, economic, and political impacts, which often endure as political legacies. While large-scale events like these have been widely studied, less attention has been paid to smaller, yet influential, political events such as peaceful protests. Although there is some debate about the long-term impact of protests on local populations, policies, and sociocultural practices in social movement studies, there is a lack of empirical evidence on whether specific significant events have brought about political and social change. Therefore, this study addresses this gap by focusing on feminist movements in South Korea that advocated for the construction of childcare facilities, examining their regional variations. It investigates whether the existence of these movements influenced welfare budgets. To test this, I construct a dataset that includes long-term information on local welfare budgets, childcare policies, and past feminist movements in South Korea, and estimate their effects using a causal identification strategy. The analysis reveals notable differences in welfare budget trends in regions where these movements achieved substantial results.
+
+## Working Paper
+
+<a href="Paper/paper.pdf" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i>   Open PDF</a>
+
+
+## Slides
+
+<a href="Slides/slide_JSQPS.html" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i> Open in a new tab</a>
+
+```{=html}
+<iframe class="slide-deck" src="Slides/slide_JSQPS.html" width="100%" style="aspect-ratio: 16 / 9.2;"></iframe>
+```
+
+
+## Regression Table
+
+### Liner Regression and Matching
+
+```{R}
+#| echo: false
+#| output: asis
+
+pacman::p_load(tidyverse, 
+               marginaleffects,
+               summarytools,
+               modelsummary,
+               mediation,
+               ggpubr, gt, kableExtra)
+
+
+att_df <- readRDS("ResultData/att_df.rds")
+
+new.names <- c("(Intercept)" = "(Intercept)",
+               mv_dm = "Past Movement",
+               welfare_b_rate = "Welfare-related Budget",
+               laborforce_rate_mean = "Women's Laborforce",
+               Marriages_rate_mean = "Marriages Rate",
+               Fertility_mean = "Fertility Rate",
+               Female_rate_mean = "Female Members",
+               Prog_rate_mean = "Progressive Members")
+
+modelsummary(att_df, output = "gt",
+             coef_map = new.names,
+             estimate  = c("{estimate}{stars}"),
+             gof_map   = c("nobs", "r.squared", "adj.r.squared"),
+             note      = "note: 0 < ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1. \r (a) is non replacement, (b),(c) are matching with replacement")|>
+  tab_options(
+    container.overflow.x = TRUE
+  )
+
+
+```
+
+
+### Causal Mediation Analysis
+
+```{R}
+#| echo: false
+#| output: asis
+
+
+model.m <- readRDS("ResultData/model.m.rds")
+model.y <- readRDS("ResultData/model.y.rds")
+
+set.seed(125)
+
+m.out_1 <- suppressMessages( #これしないとメッセージが入る
+  mediate(model.m, model.y, 
+                   boot=TRUE,sims=100, 
+                   treat="mv_dm", 
+                   mediator="Female_rate_mean")
+  )
+
+m.out_1_df <- data.frame(
+         Effects = c("ACME", "ADE", "Total Effect"),
+         Estimate = c(m.out_1$d0, m.out_1$z0, m.out_1$tau.coef),
+         Lower = c(m.out_1$d0.ci[1], m.out_1$z0.ci[1], m.out_1$tau.ci[1]),
+         Upper = c(m.out_1$d0.ci[2], m.out_1$z0.ci[2], m.out_1$tau.ci[2]))|>
+  mutate(Sig = if_else(Lower * Upper > 0, "Significant", "Insignificant"))
+
+m.out_1_df |>
+  gt() |>
+    fmt_number(decimals = 3)
+
+```
+
+
+
+## Sensitivity Analysis
+
+Causal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.
+
+For test such a key identification assumption, we can perform a sensitivity analysis. I use `mediation` package and probe the plausibility of this assumption.
+
+
+
+```{R}
+#| echo: false
+#| output: asis
+
+sens.out <- medsens(m.out_1, rho.by = 0.1, effect.type = "indirect",sims = 100)
+
+plot(sens.out, sens.par = "rho", main = "Anxiety", ylim = c(-0.2, 0.2))
+
+plot(sens.out, sens.par = "R2", r.type = "total", sign.prod = "positive")
+
+plot(sens.out, sens.par = "R2", r.type = "total", sign.prod = "negative")
+
+```

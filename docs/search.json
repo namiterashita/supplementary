@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data and Materials",
+    "section": "",
+    "text": "The Political Legacy of Feminist Movements on Childcare Policies\nWorking Paper Online Appendix\n\nConference Presentation\n\nKPSA2024 (Dec. 2024)\nJSQPS2024 (Jun. 2025)\n\n\n\n\n어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석\n\n\nJoural Article\n\n『의정논총』(73)\n\nConference Presentation\n\nKPSA2024 (Aug. 2024)"
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html",
+    "href": "Feminist-Legacy-Childcare/index.html",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "",
+    "text": "This study estimates the impact of past feminist movements on welfare policies in South Korea. It is well-established that major events such as disasters or military repression in history have lasting social, economic, and political impacts, which often endure as political legacies. While large-scale events like these have been widely studied, less attention has been paid to smaller, yet influential, political events such as peaceful protests. Although there is some debate about the long-term impact of protests on local populations, policies, and sociocultural practices in social movement studies, there is a lack of empirical evidence on whether specific significant events have brought about political and social change. Therefore, this study addresses this gap by focusing on feminist movements in South Korea that advocated for the construction of childcare facilities, examining their regional variations. It investigates whether the existence of these movements influenced welfare budgets. To test this, I construct a dataset that includes long-term information on local welfare budgets, childcare policies, and past feminist movements in South Korea, and estimate their effects using a causal identification strategy. The analysis reveals notable differences in welfare budget trends in regions where these movements achieved substantial results."
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html#abstruct",
+    "href": "Feminist-Legacy-Childcare/index.html#abstruct",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "",
+    "text": "This study estimates the impact of past feminist movements on welfare policies in South Korea. It is well-established that major events such as disasters or military repression in history have lasting social, economic, and political impacts, which often endure as political legacies. While large-scale events like these have been widely studied, less attention has been paid to smaller, yet influential, political events such as peaceful protests. Although there is some debate about the long-term impact of protests on local populations, policies, and sociocultural practices in social movement studies, there is a lack of empirical evidence on whether specific significant events have brought about political and social change. Therefore, this study addresses this gap by focusing on feminist movements in South Korea that advocated for the construction of childcare facilities, examining their regional variations. It investigates whether the existence of these movements influenced welfare budgets. To test this, I construct a dataset that includes long-term information on local welfare budgets, childcare policies, and past feminist movements in South Korea, and estimate their effects using a causal identification strategy. The analysis reveals notable differences in welfare budget trends in regions where these movements achieved substantial results."
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html#regression-table",
+    "href": "Feminist-Legacy-Childcare/index.html#regression-table",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "Regression Table",
+    "text": "Regression Table\n\nLiner Regression and Matching\n\n\n\n\n\n\n\nSimple Regression\nMultiple Regression\nSimple Nearest neighbor(a)\nMultiple Nearest neighbor(a)\nSimple Nearest neighbor(b)\nMultiple Nearest neighbor(b)\nSimple Propensity score(c)\nMultiple Propensity score(c)\n\n\n\n\n(Intercept)\n0.233***\n0.044\n0.289***\n0.467**\n0.306***\n0.426*\n0.330***\n0.584**\n\n\n\n(0.010)\n(0.114)\n(0.018)\n(0.175)\n(0.024)\n(0.187)\n(0.024)\n(0.212)\n\n\nPast Movement\n0.151***\n0.038**\n0.096***\n0.037*\n0.078*\n0.044*\n0.054+\n0.035+\n\n\n\n(0.019)\n(0.014)\n(0.025)\n(0.016)\n(0.030)\n(0.017)\n(0.030)\n(0.020)\n\n\nWelfare-related Budget\n\n0.314*\n\n0.116\n\n0.060\n\n-0.221\n\n\n\n\n(0.139)\n\n(0.183)\n\n(0.193)\n\n(0.207)\n\n\nWomen's Laborforce\n\n-0.476***\n\n-1.002***\n\n-0.988***\n\n-1.137***\n\n\n\n\n(0.136)\n\n(0.252)\n\n(0.278)\n\n(0.308)\n\n\nMarriages Rate\n\n0.036***\n\n0.042***\n\n0.054***\n\n0.054***\n\n\n\n\n(0.007)\n\n(0.008)\n\n(0.009)\n\n(0.010)\n\n\nFertility Rate\n\n0.114**\n\n\n\n\n\n\n\n\n\n\n(0.042)\n\n\n\n\n\n\n\n\nFemale Members\n\n0.460***\n\n0.436**\n\n0.352*\n\n0.266\n\n\n\n\n(0.116)\n\n(0.158)\n\n(0.165)\n\n(0.175)\n\n\nProgressive Members\n\n0.010\n\n0.014\n\n-0.011\n\n0.040\n\n\n\n\n(0.023)\n\n(0.044)\n\n(0.054)\n\n(0.053)\n\n\nNum.Obs.\n153\n152\n82\n82\n66\n66\n64\n64\n\n\nR2\n0.295\n0.754\n0.150\n0.732\n0.096\n0.755\n0.049\n0.684\n\n\nR2 Adj.\n0.290\n0.742\n0.139\n0.711\n0.081\n0.730\n0.033\n0.651\n\n\n\nnote: 0 &lt; ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1. (a) is non replacement, (b),(c) are matching with replacement\n\n\n\n\n\n\n\n\nCausal Mediation Analysis\n\n\n\n\n\n\nEffects\nEstimate\nLower\nUpper\nSig\n\n\n\n\nACME\n0.016\n0.005\n0.029\nSignificant\n\n\nADE\n0.038\n0.008\n0.070\nSignificant\n\n\nTotal Effect\n0.054\n0.022\n0.092\nSignificant"
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html#sensitivity-analysis",
+    "href": "Feminist-Legacy-Childcare/index.html#sensitivity-analysis",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "Sensitivity Analysis",
+    "text": "Sensitivity Analysis\nCausal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.\nFor test such a key identification assumption, we can perform a sensitivity analysis. I use mediation package and probe the plausibility of this assumption."
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html#slides",
+    "href": "Feminist-Legacy-Childcare/index.html#slides",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "Slides",
+    "text": "Slides\n Open in a new tab"
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html#paper",
+    "href": "Feminist-Legacy-Childcare/index.html#paper",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "Paper",
+    "text": "Paper\n   Open PDF"
+  },
+  {
+    "objectID": "Feminist-Legacy-Childcare/index.html#working-paper",
+    "href": "Feminist-Legacy-Childcare/index.html#working-paper",
+    "title": "Appendix : The Political Legacy of Feminist Movements on Childcare Policies",
+    "section": "Working Paper",
+    "text": "Working Paper\n   Open PDF"
+  }
+]

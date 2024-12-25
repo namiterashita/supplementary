@@ -1,0 +1,30 @@
+---
+date-modified: today
+link-external-newwindow: true
+toc-depth: 5
+---
+
+### The Political Legacy of Feminist Movements on Childcare Policies 
+
+[Working Paper](Feminist-Legacy-Childcare/Paper/paper.pdf){.btn .btn-outline-success .btn-sm}
+[Online Appendix](Feminist-Legacy-Childcare/index.qmd){.btn .btn-outline-success .btn-sm}
+
+- Conference Presentation
+    - KPSA2024 (Dec. 2024)
+    - JSQPS2024 (Jun. 2025)
+
+
+### 어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석
+
+<!--
+
+[DOI](){.btn .btn-outline-success .btn-sm}
+[Online Appendix](){.btn .btn-outline-success .btn-sm}
+
+-->
+
+- Joural Article
+    - 『의정논총』(73)
+
+- Conference Presentation
+    - KPSA2024 (Aug. 2024)

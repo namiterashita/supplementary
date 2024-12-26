@@ -17,14 +17,13 @@ toc-depth: 5
 ### 어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석
 
 <!--
-
 [DOI](){.btn .btn-outline-success .btn-sm}
-[Online Appendix](){.btn .btn-outline-success .btn-sm}
-
 -->
 
+[Online Appendix](JPR2024/index.qmd){.btn .btn-outline-success .btn-sm}
+
 - Journal Article
-    - 『의정논총』(73)
+    - 『의정논총』19(2)
 
 - Conference Presentation
     - KPSA2024 (Aug. 2024)

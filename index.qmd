@@ -11,7 +11,7 @@ toc-depth: 5
 
 - Conference Presentation
     - KPSA2024 (Dec. 2024)
-    - JSQPS2024 (Jun. 2025)
+    - JSQPS2024 (Jan. 2025)
 
 
 ### 어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석

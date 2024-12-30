@@ -16,10 +16,6 @@ website:
     left:
       - text: "Kazuhiro Terashita"
         href: https://www.kazuhiroterashita.com
-    #  - text: "Research"
-     #   href: research/index.qmd
-    #  - text: "Teaching"
-     #   href: teaching/index.qmd
     right: 
       - icon: twitter
         href: https://twitter.com/namiterashita

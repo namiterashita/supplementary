@@ -27,3 +27,16 @@ toc-depth: 5
 
 - Conference Presentation
     - KPSA2024 (Aug. 2024)
+
+### 女性団体の活動は福祉予算に影響を及ぼすのか：韓国・地方自治体の抗議イベントデータを用いた実証分析
+
+[CiNii](https://cir.nii.ac.jp/crid/1520017611557227520){.btn .btn-outline-success .btn-sm}
+[Online Appendix](JPPS2023/index.qmd){.btn .btn-outline-success .btn-sm}
+
+- Journal Article
+    - 『公共政策研究』(23):139-155
+
+- Conference Presentation
+    - PPSA2022 (June 2022)
+    - ISTR2022 (July 2022)
+    

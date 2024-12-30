@@ -1,6 +1,8 @@
 ---
-title: "Appendix: 어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석"
-author: 
+format:
+  html:
+    title: "Appendix: 어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석"
+    author: 
       - name: Kazuhiro Terashita
         affiliations:
         - ref: 2
@@ -13,18 +15,41 @@ author:
       - name: Sunwoo Kwak
         affiliations:
         - ref: 1
-affiliations: 
-  - id: 1
-    name: Yonsei University
-  - id: 2
-    name: Kyoto University
-#institute: "Program-Specific Researcher, Kyoto University <br> JSPS Postdoctoral Research Fellow"
-date-modified: today
-link-external-newwindow: true
+    affiliations: 
+        - id: 1
+          name: Yonsei University
+        - id: 2
+          name: Kyoto University
+    date-modified: today
+    link-external-newwindow: true
+    #link-external-icon: true
+    toc: true
+    toc-depth: 5
+    lang: ko
+  docx: #어떠한 형식을 기술해 두지 않으면 왠지 URL의 기재를 할 수 없다
+    #title: "Appendix"
+    #date: today
+    output-file: appendix.docx
+
+format-links: 
+  - html
+  - text: PDF
+    href: Appendix/Appendix.pdf
+    icon: file-pdf
+
 ---
 
-## Abstruct
+## 요약 / Abstruct
 
+### 국문
+
+본 연구는 21대 국회 회의록 데이터를 이용해 선거제도와 의원 개개인의 특성을 통한 국회의 지리적 대표성을 밝힌다. 지리적 대표성은 정치인이 어느 지역의 이익을 대표하는지를 보여주는 개념이다. 이와 관련한 선행연구는 한국의 특수한 의회제도가 지리적 대표성에 미치는 영향을 밝혀내지 못했다. 본 연구에서는 한국의 사례에서 선행연구가 지적하는 지리적 대표성 요인을 재검토하는 동시에 제도와 특성에 주목한 새로운 가설을 검증한다. 분석 결과, 비례 출신 의원보다 지역구 출신 의원이 더 많은 지역에 관해 언급하고, 더 나아가 지역구 출신 의원은 지방 정치 경험이 있을수록 더 자신의 지역구를 대표하게 되는 것으로 나타났다. 반면 지역구 출신 의원은 당선 횟수가 늘어날수록 지역을 대표하지 않게 된다. 마지막으로 선행연구가 언급해 온 지연의 효과는 21대 국회에 대해서는 나타나지 않았지만, 지방정치 경험의 효과는 지연이 강할수록 감소하는 것으로 나타났다.
+
+### English
+
+This study investigates the geographical representation in the South Korean National Assembly based on the electoral system and individual legislators’ characteristics. Drawing on data from the minutes of the 21st National Assembly, it examines which lawmakers are more likely to represent regional interests. Geographical representation refers to the extent to which politicians advocate for the interests of particular regions and localities. While numerous studies have explored this subject, existing literature has not fully uncovered how Korea’s unique legislative structure influences geographical representation. In particular, local ties have frequently been cited as a key factor shaping legislators’ geographical representation, but findings have been inconsistent. 
+
+Therefore, this study re-examines the factors identified by previous research in the Korean context and tests a new hypothesis emphasizing both institutional factors and legislators’ personal attributes. The results show that compared to those elected through proportional representation, district-based legislators make more references to regional concerns. Furthermore, district-based legislators with local political experience are more likely to represent the constituencies. However, the more terms these district-based legislators serve, the less likely they are to champion regional interests. Lastly, although the direct effect of local ties found in prior studies does not appear in the 21st National Assembly, our interaction analysis shows that the positive effect of local political experience on geographical representation diminishes when local ties are strong. 
 
 
 ## Online Appendix (PDF)
@@ -43,12 +68,9 @@ link-external-newwindow: true
 
 -->
 
-<!--
+## A1: newsmap 추정결과
 
-
-## Regression Table
-
-### Liner Regression and Matching
+### A1-1: 지리 추정 결과의 예
 
 ```{R}
 #| echo: false
@@ -61,89 +83,83 @@ pacman::p_load(tidyverse,
                mediation,
                ggpubr, gt, kableExtra)
 
+newsmap_ap_ex <- readRDS("ResultData/newsmap_ap_ex.rds")
+knitr::kable(newsmap_ap_ex, 
+             col.names = c('발언내용', '발언자','가능도비 스코어', '추정 지리'),
+             digits = 4, format.args = list(scientific = FALSE))
 
-att_df <- readRDS("ResultData/att_df.rds")
 
-new.names <- c("(Intercept)" = "(Intercept)",
-               mv_dm = "Past Movement",
-               welfare_b_rate = "Welfare-related Budget",
-               laborforce_rate_mean = "Women's Laborforce",
-               Marriages_rate_mean = "Marriages Rate",
-               Fertility_mean = "Fertility Rate",
-               Female_rate_mean = "Female Members",
-               Prog_rate_mean = "Progressive Members")
+```
 
-modelsummary(att_df, output = "gt",
-             coef_map = new.names,
-             estimate  = c("{estimate}{stars}"),
-             gof_map   = c("nobs", "r.squared", "adj.r.squared"),
-             note      = "note: 0 < ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1. \r (a) is non replacement, (b),(c) are matching with replacement")|>
+
+### A1-2: 추정된 발언의 지역 집계 결과
+
+
+```{R}
+#| echo: false
+#| output: asis
+
+
+newsmap_ap <- readRDS("ResultData/newsmap_ap.rds")
+
+newsmap_ap |>
+  gt() |>
+  fmt_number(columns = 5, decimals = 3) |> # 다섯 번째 열 숫자의 소수점 수정
+  cols_label("loc_wide_kr" = "광역가치단체", "N" = "총발언수", 
+             "MemberN" = "의원 발언수(A)", "SpeakerN" = "발언 의원 수(B)",
+             "Average" = "1인당 발언수(A/B)")|>
+  tab_footnote(footnote = "주1: 특별시·광역시를 제외한 지리는 기초 자치체(시·군) 레벨로 추정해, 광역 자치체 레벨로 다시 집계하고 있다. ") |>
+  tab_footnote(footnote = "주2: 21대 국회 전 기간의 추정 결과이기 때문에 의원 수는 분석에 이용한 데이터와 일치하지 않는다.") 
+
+
+
+```
+
+## A2: 회귀표
+
+
+```{R}
+#| echo: false
+#| output: asis
+
+Models <- readRDS("ResultData/Models.rds")
+
+## 변수 이름 변경 및 정렬
+map <- c("(Intercept)" = "절편",
+         "MR" = "지역구 더미", "Local_ties" = "지연",
+         "Local_exp" = "지방정치 경험", "Elected" = "당선횟수",
+         "candidate22" = "22대 출마",
+         "Local_exp:Local_ties" = "지방정치 경험 × 지연",
+         "Female_dm" = "여성 더미", "Age" = "연령",
+         "Education" = "교육수준", "Birth_place_dm" = "출신지 일지",
+         "Share" = "득표율", 
+         "Party_국민의힘" = "국민의힘",
+         "Party_국민의미래" = "국민의미래",
+         "Party_개혁신당" = "개혁신당",
+         "Party_조국혁신당" = "조국혁신당",
+         "Party_더불어민주당" = "더불어민주당",
+         "Party_더불어민주연합" = "더불어민주연합",
+         "Party_무소속" = "무소속",
+         "Party_진보당" = "진보당",
+         "Party_자유통일당" = "자유통일당",
+         "Party_녹색정의당" = "녹색정의당",
+         "Local_영남" = "영남",
+         "Local_호남" = "호남",
+         "Local_강원" = "강원",
+         "Local_충청" = "충청",
+         "Local_제주" = "제주",
+         "Year2021" = "2021년",
+         "Year2022" = "2022년",
+         "Year2023" = "2023년")
+
+modelsummary(Models, output = "gt",
+             coef_map = map,
+             gof_map   = c("nobs", "r.squared", "adj.r.squared","aic"),
+             note      = "주:()는 표준 오차.")|>
   tab_options(
     container.overflow.x = TRUE
   )
 
 
 ```
-
-
-
-
-### Causal Mediation Analysis
-
-```{R}
-#| echo: false
-#| output: asis
-
-
-model.m <- readRDS("ResultData/model.m.rds")
-model.y <- readRDS("ResultData/model.y.rds")
-
-set.seed(125)
-
-m.out_1 <- suppressMessages( #これしないとメッセージが入る
-  mediate(model.m, model.y, 
-                   boot=TRUE,sims=100, 
-                   treat="mv_dm", 
-                   mediator="Female_rate_mean")
-  )
-
-m.out_1_df <- data.frame(
-         Effects = c("ACME", "ADE", "Total Effect"),
-         Estimate = c(m.out_1$d0, m.out_1$z0, m.out_1$tau.coef),
-         Lower = c(m.out_1$d0.ci[1], m.out_1$z0.ci[1], m.out_1$tau.ci[1]),
-         Upper = c(m.out_1$d0.ci[2], m.out_1$z0.ci[2], m.out_1$tau.ci[2]))|>
-  mutate(Sig = if_else(Lower * Upper > 0, "Significant", "Insignificant"))
-
-m.out_1_df |>
-  gt() |>
-    fmt_number(decimals = 3)
-
-```
-
-
-
-## Sensitivity Analysis
-
-Causal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.
-
-For test such a key identification assumption, we can perform a sensitivity analysis. I use `mediation` package and probe the plausibility of this assumption.
-
-
-
-```{R}
-#| echo: false
-#| output: asis
-
-sens.out <- medsens(m.out_1, rho.by = 0.1, effect.type = "indirect",sims = 100)
-
-plot(sens.out, sens.par = "rho", main = "Anxiety", ylim = c(-0.2, 0.2))
-
-plot(sens.out, sens.par = "R2", r.type = "total", sign.prod = "positive")
-
-plot(sens.out, sens.par = "R2", r.type = "total", sign.prod = "negative")
-
-```
-
--->
-
 

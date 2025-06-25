@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Data and Materials",
     "section": "",
-    "text": "The Political Legacy of Feminist Movements on Childcare Policies\nWorking Paper Online Appendix\n\nConference Presentation\n\nKPSA2024 (Dec. 2024)\nJSQPS2024 (Jan. 2025)\n\n\n\n\n어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석\n\nOnline Appendix\n\nJournal Article\n\n『의정논총』19(2)\n\nConference Presentation\n\nKPSA2024 (Aug. 2024)\n\n\n\n\n女性団体の活動は福祉予算に影響を及ぼすのか：韓国・地方自治体の抗議イベントデータを用いた実証分析\nCiNii Online Appendix\n\nJournal Article\n\n『公共政策研究』(23):139-155\n\nConference Presentation\n\nPPSA2022 (June 2022)\nISTR2022 (July 2022)"
+    "text": "What do Young Men Oppose about Feminism?\nWorking Paper Online Appendix\n\nConference Presentation\n\nISTR2025 (July 2025)\n\n\n\n\nIdentifying Instrumental Variables for Social Movements\nWorking Paper Online Appendix\n\nConference Presentation\n\nJACP2025 (June 2025)\n\n\n\n\nThe Political Legacy of Feminist Movements on Childcare Policies\nWorking Paper Online Appendix\n\nConference Presentation\n\nKPSA2024 (Dec. 2024)\nJSQPS2024 (Jan. 2025)\n\n\n\n\n어떤 의원이 지역을 언급하는가?: 국회 발언을 이용한 지리적 대표성 분석\n\nOnline Appendix\n\nJournal Article\n\n『의정논총』19(2)\n\nConference Presentation\n\nKPSA2024 (Aug. 2024)\n\n\n\n\n女性団体の活動は福祉予算に影響を及ぼすのか：韓国・地方自治体の抗議イベントデータを用いた実証分析\nCiNii Online Appendix\n\nJournal Article\n\n『公共政策研究』(23):139-155\n\nConference Presentation\n\nPPSA2022 (June 2022)\nISTR2022 (July 2022)"
   },
   {
     "objectID": "Feminist-Legacy-Childcare/index.html",
@@ -117,5 +117,89 @@
     "title": "Appendix: 女性団体の活動は福祉予算に影響を及ぼすのか：韓国・地方自治体の抗議イベントデータを用いた実証分析",
     "section": "Online Appendix (PDF)",
     "text": "Online Appendix (PDF)\n   Open PDF"
+  },
+  {
+    "objectID": "IV-protest/index.html",
+    "href": "IV-protest/index.html",
+    "title": "Appendix : Identifying Instrumental Variables for Social Movements",
+    "section": "",
+    "text": "This study attempts to explore instrumental variables in social movement research using a unique Korean dataset. With the development of causal identification methods, social scientists studying social movements have increasingly sought to develop new methodologies. While many researchers have used precipitation as an instrumental variable, its effect on social movement variables beyond mobilization remains unclear. Furthermore, there has been limited progress in examining random factors other than precipitation. Therefore, this paper estimates the effects of precipitation and temperature on protest occurrence, media coverage, and protest intensity in South Korea, utilizing data originally generated from Korean newspaper articles. The analysis reveals that these exogenous and random variables do not significantly affect event count, media coverage, or protest intensity—all important factors in social movements. These results provide methodological implications for examining social movement aspects beyond mobilization and highlight the need to consider the nature of civil society and specific protest characteristics."
+  },
+  {
+    "objectID": "IV-protest/index.html#abstruct",
+    "href": "IV-protest/index.html#abstruct",
+    "title": "Appendix : Identifying Instrumental Variables for Social Movements",
+    "section": "",
+    "text": "This study attempts to explore instrumental variables in social movement research using a unique Korean dataset. With the development of causal identification methods, social scientists studying social movements have increasingly sought to develop new methodologies. While many researchers have used precipitation as an instrumental variable, its effect on social movement variables beyond mobilization remains unclear. Furthermore, there has been limited progress in examining random factors other than precipitation. Therefore, this paper estimates the effects of precipitation and temperature on protest occurrence, media coverage, and protest intensity in South Korea, utilizing data originally generated from Korean newspaper articles. The analysis reveals that these exogenous and random variables do not significantly affect event count, media coverage, or protest intensity—all important factors in social movements. These results provide methodological implications for examining social movement aspects beyond mobilization and highlight the need to consider the nature of civil society and specific protest characteristics."
+  },
+  {
+    "objectID": "IV-protest/index.html#working-paper",
+    "href": "IV-protest/index.html#working-paper",
+    "title": "Appendix : Identifying Instrumental Variables for Social Movements",
+    "section": "Working Paper",
+    "text": "Working Paper\n   Open PDF"
+  },
+  {
+    "objectID": "IV-protest/index.html#slides",
+    "href": "IV-protest/index.html#slides",
+    "title": "Appendix : Identifying Instrumental Variables for Social Movements",
+    "section": "Slides",
+    "text": "Slides\n Open in a new tab"
+  },
+  {
+    "objectID": "IV-protest/index.html#regression-table",
+    "href": "IV-protest/index.html#regression-table",
+    "title": "Appendix : Identifying Instrumental Variables for Social Movements",
+    "section": "Regression Table",
+    "text": "Regression Table\n\nLiner Regression and Matching\n\n\n\n\n\n\n\nSimple Regression\nMultiple Regression\nSimple Nearest neighbor(a)\nMultiple Nearest neighbor(a)\nSimple Nearest neighbor(b)\nMultiple Nearest neighbor(b)\nSimple Propensity score(c)\nMultiple Propensity score(c)\n\n\n\n\n(Intercept)\n0.233***\n0.044\n0.289***\n0.467**\n0.306***\n0.426*\n0.330***\n0.584**\n\n\n\n(0.010)\n(0.114)\n(0.018)\n(0.175)\n(0.024)\n(0.187)\n(0.024)\n(0.212)\n\n\nPast Movement\n0.151***\n0.038**\n0.096***\n0.037*\n0.078*\n0.044*\n0.054+\n0.035+\n\n\n\n(0.019)\n(0.014)\n(0.025)\n(0.016)\n(0.030)\n(0.017)\n(0.030)\n(0.020)\n\n\nWelfare-related Budget\n\n0.314*\n\n0.116\n\n0.060\n\n-0.221\n\n\n\n\n(0.139)\n\n(0.183)\n\n(0.193)\n\n(0.207)\n\n\nWomen's Laborforce\n\n-0.476***\n\n-1.002***\n\n-0.988***\n\n-1.137***\n\n\n\n\n(0.136)\n\n(0.252)\n\n(0.278)\n\n(0.308)\n\n\nMarriages Rate\n\n0.036***\n\n0.042***\n\n0.054***\n\n0.054***\n\n\n\n\n(0.007)\n\n(0.008)\n\n(0.009)\n\n(0.010)\n\n\nFertility Rate\n\n0.114**\n\n\n\n\n\n\n\n\n\n\n(0.042)\n\n\n\n\n\n\n\n\nFemale Members\n\n0.460***\n\n0.436**\n\n0.352*\n\n0.266\n\n\n\n\n(0.116)\n\n(0.158)\n\n(0.165)\n\n(0.175)\n\n\nProgressive Members\n\n0.010\n\n0.014\n\n-0.011\n\n0.040\n\n\n\n\n(0.023)\n\n(0.044)\n\n(0.054)\n\n(0.053)\n\n\nNum.Obs.\n153\n152\n82\n82\n66\n66\n64\n64\n\n\nR2\n0.295\n0.754\n0.150\n0.732\n0.096\n0.755\n0.049\n0.684\n\n\nR2 Adj.\n0.290\n0.742\n0.139\n0.711\n0.081\n0.730\n0.033\n0.651\n\n\n\nnote: 0 &lt; ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1. (a) is non replacement, (b),(c) are matching with replacement\n\n\n\n\n\n\n\n\nCausal Mediation Analysis\n\n\n\n\n\n\nEffects\nEstimate\nLower\nUpper\nSig\n\n\n\n\nACME\n0.016\n0.005\n0.029\nSignificant\n\n\nADE\n0.038\n0.008\n0.070\nSignificant\n\n\nTotal Effect\n0.054\n0.022\n0.092\nSignificant"
+  },
+  {
+    "objectID": "IV-protest/index.html#sensitivity-analysis",
+    "href": "IV-protest/index.html#sensitivity-analysis",
+    "title": "Appendix : Identifying Instrumental Variables for Social Movements",
+    "section": "Sensitivity Analysis",
+    "text": "Sensitivity Analysis\nCausal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.\nFor test such a key identification assumption, we can perform a sensitivity analysis. I use mediation package and probe the plausibility of this assumption."
+  },
+  {
+    "objectID": "Oppose-Feminism/index.html",
+    "href": "Oppose-Feminism/index.html",
+    "title": "Appendix : What do Young Men Oppose about Feminism?",
+    "section": "",
+    "text": "This study examines how young men respond to different feminist claims through a survey experiment. While young men are often portrayed as egalitarian and diversity-oriented, many express opposition to feminism, especially when facing collective threat or economic vulnerability. Previous research has typically treated feminist claims as uniform and focused mainly on young men, without sufficiently addressing how responses vary across generations. To address these gaps, this study uses an unsupervised machine learning model to classify distinct feminist claims in South Korea and designs a survey experiment based on these categories. The experiment was conducted with a nationally representative online panel of South Korean voters aged 18 and older. Results show that young men strongly oppose quota-related claims but are more moderate toward others, such as care work and gender-based violence. Importantly, the analysis reveals that generational context significantly shapes attitudes, with older respondents also showing unique patterns of resistance. These findings contribute to research on political polarization and social movements by highlighting how feminist discourse interacts with generational and gender dynamics, offering insights into how polarization may be mitigated."
+  },
+  {
+    "objectID": "Oppose-Feminism/index.html#abstruct",
+    "href": "Oppose-Feminism/index.html#abstruct",
+    "title": "Appendix : What do Young Men Oppose about Feminism?",
+    "section": "",
+    "text": "This study examines how young men respond to different feminist claims through a survey experiment. While young men are often portrayed as egalitarian and diversity-oriented, many express opposition to feminism, especially when facing collective threat or economic vulnerability. Previous research has typically treated feminist claims as uniform and focused mainly on young men, without sufficiently addressing how responses vary across generations. To address these gaps, this study uses an unsupervised machine learning model to classify distinct feminist claims in South Korea and designs a survey experiment based on these categories. The experiment was conducted with a nationally representative online panel of South Korean voters aged 18 and older. Results show that young men strongly oppose quota-related claims but are more moderate toward others, such as care work and gender-based violence. Importantly, the analysis reveals that generational context significantly shapes attitudes, with older respondents also showing unique patterns of resistance. These findings contribute to research on political polarization and social movements by highlighting how feminist discourse interacts with generational and gender dynamics, offering insights into how polarization may be mitigated."
+  },
+  {
+    "objectID": "Oppose-Feminism/index.html#working-paper",
+    "href": "Oppose-Feminism/index.html#working-paper",
+    "title": "Appendix : What do Young Men Oppose about Feminism?",
+    "section": "Working Paper",
+    "text": "Working Paper\n   Open PDF"
+  },
+  {
+    "objectID": "Oppose-Feminism/index.html#slides",
+    "href": "Oppose-Feminism/index.html#slides",
+    "title": "Appendix : What do Young Men Oppose about Feminism?",
+    "section": "Slides",
+    "text": "Slides\n Open in a new tab"
+  },
+  {
+    "objectID": "Oppose-Feminism/index.html#regression-table",
+    "href": "Oppose-Feminism/index.html#regression-table",
+    "title": "Appendix : What do Young Men Oppose about Feminism?",
+    "section": "Regression Table",
+    "text": "Regression Table\n\nLiner Regression and Matching\n\n\n\n\n\n\n\nSimple Regression\nMultiple Regression\nSimple Nearest neighbor(a)\nMultiple Nearest neighbor(a)\nSimple Nearest neighbor(b)\nMultiple Nearest neighbor(b)\nSimple Propensity score(c)\nMultiple Propensity score(c)\n\n\n\n\n(Intercept)\n0.233***\n0.044\n0.289***\n0.467**\n0.306***\n0.426*\n0.330***\n0.584**\n\n\n\n(0.010)\n(0.114)\n(0.018)\n(0.175)\n(0.024)\n(0.187)\n(0.024)\n(0.212)\n\n\nPast Movement\n0.151***\n0.038**\n0.096***\n0.037*\n0.078*\n0.044*\n0.054+\n0.035+\n\n\n\n(0.019)\n(0.014)\n(0.025)\n(0.016)\n(0.030)\n(0.017)\n(0.030)\n(0.020)\n\n\nWelfare-related Budget\n\n0.314*\n\n0.116\n\n0.060\n\n-0.221\n\n\n\n\n(0.139)\n\n(0.183)\n\n(0.193)\n\n(0.207)\n\n\nWomen's Laborforce\n\n-0.476***\n\n-1.002***\n\n-0.988***\n\n-1.137***\n\n\n\n\n(0.136)\n\n(0.252)\n\n(0.278)\n\n(0.308)\n\n\nMarriages Rate\n\n0.036***\n\n0.042***\n\n0.054***\n\n0.054***\n\n\n\n\n(0.007)\n\n(0.008)\n\n(0.009)\n\n(0.010)\n\n\nFertility Rate\n\n0.114**\n\n\n\n\n\n\n\n\n\n\n(0.042)\n\n\n\n\n\n\n\n\nFemale Members\n\n0.460***\n\n0.436**\n\n0.352*\n\n0.266\n\n\n\n\n(0.116)\n\n(0.158)\n\n(0.165)\n\n(0.175)\n\n\nProgressive Members\n\n0.010\n\n0.014\n\n-0.011\n\n0.040\n\n\n\n\n(0.023)\n\n(0.044)\n\n(0.054)\n\n(0.053)\n\n\nNum.Obs.\n153\n152\n82\n82\n66\n66\n64\n64\n\n\nR2\n0.295\n0.754\n0.150\n0.732\n0.096\n0.755\n0.049\n0.684\n\n\nR2 Adj.\n0.290\n0.742\n0.139\n0.711\n0.081\n0.730\n0.033\n0.651\n\n\n\nnote: 0 &lt; ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1. (a) is non replacement, (b),(c) are matching with replacement\n\n\n\n\n\n\n\n\nCausal Mediation Analysis\n\n\n\n\n\n\nEffects\nEstimate\nLower\nUpper\nSig\n\n\n\n\nACME\n0.016\n0.005\n0.029\nSignificant\n\n\nADE\n0.038\n0.008\n0.070\nSignificant\n\n\nTotal Effect\n0.054\n0.022\n0.092\nSignificant"
+  },
+  {
+    "objectID": "Oppose-Feminism/index.html#sensitivity-analysis",
+    "href": "Oppose-Feminism/index.html#sensitivity-analysis",
+    "title": "Appendix : What do Young Men Oppose about Feminism?",
+    "section": "Sensitivity Analysis",
+    "text": "Sensitivity Analysis\nCausal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.\nFor test such a key identification assumption, we can perform a sensitivity analysis. I use mediation package and probe the plausibility of this assumption."
   }
 ]

@@ -1,0 +1,124 @@
+---
+title: "Appendix : What do Young Men Oppose about Feminism?"
+subtitle: "A Survey Experiment in South Korea"
+author: "Kazuhiro Terashita"
+institute: ""
+date-modified: today
+link-external-newwindow: true
+---
+
+## Abstruct
+
+This study examines how young men respond to different feminist claims through a survey experiment. While young men are often portrayed as egalitarian and diversity-oriented, many express opposition to feminism, especially when facing collective threat or economic vulnerability. Previous research has typically treated feminist claims as uniform and focused mainly on young men, without sufficiently addressing how responses vary across generations. To address these gaps, this study uses an unsupervised machine learning model to classify distinct feminist claims in South Korea and designs a survey experiment based on these categories. The experiment was conducted with a nationally representative online panel of South Korean voters aged 18 and older. Results show that young men strongly oppose quota-related claims but are more moderate toward others, such as care work and gender-based violence. Importantly, the analysis reveals that generational context significantly shapes attitudes, with older respondents also showing unique patterns of resistance. These findings contribute to research on political polarization and social movements by highlighting how feminist discourse interacts with generational and gender dynamics, offering insights into how polarization may be mitigated. 
+
+## Working Paper
+
+<a href="Paper/paper.pdf" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i>   Open PDF</a>
+
+<!--
+## Slides
+
+<a href="Slides/slide_JSQPS.html" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i> Open in a new tab</a>
+
+```{=html}
+<iframe class="slide-deck" src="Slides/slide_JSQPS.html" width="100%" style="aspect-ratio: 16 / 9.2;"></iframe>
+```
+
+
+## Regression Table
+
+### Liner Regression and Matching
+
+```{R}
+#| echo: false
+#| output: asis
+
+pacman::p_load(tidyverse, 
+               marginaleffects,
+               summarytools,
+               modelsummary,
+               mediation,
+               ggpubr, gt, kableExtra)
+
+
+att_df <- readRDS("ResultData/att_df.rds")
+
+new.names <- c("(Intercept)" = "(Intercept)",
+               mv_dm = "Past Movement",
+               welfare_b_rate = "Welfare-related Budget",
+               laborforce_rate_mean = "Women's Laborforce",
+               Marriages_rate_mean = "Marriages Rate",
+               Fertility_mean = "Fertility Rate",
+               Female_rate_mean = "Female Members",
+               Prog_rate_mean = "Progressive Members")
+
+modelsummary(att_df, output = "gt",
+             coef_map = new.names,
+             estimate  = c("{estimate}{stars}"),
+             gof_map   = c("nobs", "r.squared", "adj.r.squared"),
+             note      = "note: 0 < ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1. \r (a) is non replacement, (b),(c) are matching with replacement")|>
+  tab_options(
+    container.overflow.x = TRUE
+  )
+
+
+```
+
+
+### Causal Mediation Analysis
+
+```{R}
+#| echo: false
+#| output: asis
+
+
+model.m <- readRDS("ResultData/model.m.rds")
+model.y <- readRDS("ResultData/model.y.rds")
+
+set.seed(125)
+
+m.out_1 <- suppressMessages( #これしないとメッセージが入る
+  mediate(model.m, model.y, 
+                   boot=TRUE,sims=100, 
+                   treat="mv_dm", 
+                   mediator="Female_rate_mean")
+  )
+
+m.out_1_df <- data.frame(
+         Effects = c("ACME", "ADE", "Total Effect"),
+         Estimate = c(m.out_1$d0, m.out_1$z0, m.out_1$tau.coef),
+         Lower = c(m.out_1$d0.ci[1], m.out_1$z0.ci[1], m.out_1$tau.ci[1]),
+         Upper = c(m.out_1$d0.ci[2], m.out_1$z0.ci[2], m.out_1$tau.ci[2]))|>
+  mutate(Sig = if_else(Lower * Upper > 0, "Significant", "Insignificant"))
+
+m.out_1_df |>
+  gt() |>
+    fmt_number(decimals = 3)
+
+```
+
+
+
+## Sensitivity Analysis
+
+Causal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.
+
+For test such a key identification assumption, we can perform a sensitivity analysis. I use `mediation` package and probe the plausibility of this assumption.
+
+
+
+```{R}
+#| echo: false
+#| output: asis
+
+sens.out <- medsens(m.out_1, rho.by = 0.1, effect.type = "indirect",sims = 100)
+
+plot(sens.out, sens.par = "rho", main = "Anxiety", ylim = c(-0.2, 0.2))
+
+plot(sens.out, sens.par = "R2", r.type = "total", sign.prod = "positive")
+
+plot(sens.out, sens.par = "R2", r.type = "total", sign.prod = "negative")
+
+```
+
+-->

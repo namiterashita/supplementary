@@ -8,7 +8,7 @@ lang: en
 website:
   site-url: "https://www.kazuhiroterashita.com/supplementary"
   title: "Data and Materials"
-  page-footer: "Copyright 2024, [Kazuhiro Terashita](https://www.kazuhiroterashita.com). Powered by [Quarto](https://quarto.org/)"
+  page-footer: "Copyright 2025, [Kazuhiro Terashita](https://www.kazuhiroterashita.com). Powered by [Quarto](https://quarto.org/)"
   #google-analytics: "G-9CQKQ3Z1YQ"
   favicon: "pic/favicon2.png"
   navbar:
@@ -17,8 +17,6 @@ website:
       - text: "Kazuhiro Terashita"
         href: https://www.kazuhiroterashita.com
     right: 
-      - icon: twitter
-        href: https://twitter.com/namiterashita
       - icon: instagram
         href: https://www.instagram.com/namiterashita/
       - text: "{{< iconify bi threads size=20px >}}" #quarto add mcanouil/quarto-iconify の実行が必要

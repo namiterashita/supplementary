@@ -4,6 +4,24 @@ link-external-newwindow: true
 toc-depth: 5
 ---
 
+
+### What do Young Men Oppose about Feminism?
+
+[Working Paper](Oppose-Feminism/Paper/paper.pdf){.btn .btn-outline-success .btn-sm}
+[Online Appendix](Oppose-Feminism/index.qmd){.btn .btn-outline-success .btn-sm}
+
+- Conference Presentation
+    - ISTR2025 (July 2025)
+
+### Identifying Instrumental Variables for Social Movements
+
+[Working Paper](IV-protest/Paper/paper.pdf){.btn .btn-outline-success .btn-sm}
+[Online Appendix](IV-protest/index.qmd){.btn .btn-outline-success .btn-sm}
+
+- Conference Presentation
+    - JACP2025 (June 2025)
+
+
 ### The Political Legacy of Feminist Movements on Childcare Policies 
 
 [Working Paper](Feminist-Legacy-Childcare/Paper/paper.pdf){.btn .btn-outline-success .btn-sm}

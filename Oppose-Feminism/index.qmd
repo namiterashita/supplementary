@@ -15,15 +15,15 @@ This study examines how young men respond to different feminist claims through a
 
 <a href="Paper/paper.pdf" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i>   Open PDF</a>
 
-<!--
 ## Slides
 
-<a href="Slides/slide_JSQPS.html" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i> Open in a new tab</a>
+<a href="Slides/slide.html" class="btn btn-primary btn-sm" target="_blank" role="button"><i class="bi bi-window"></i> Open in a new tab</a>
 
 ```{=html}
-<iframe class="slide-deck" src="Slides/slide_JSQPS.html" width="100%" style="aspect-ratio: 16 / 9.2;"></iframe>
+<iframe class="slide-deck" src="Slides/slide.html" width="100%" style="aspect-ratio: 16 / 9.2;"></iframe>
 ```
 
+<!--
 
 ## Regression Table
 

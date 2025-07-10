@@ -200,6 +200,6 @@
     "href": "Oppose-Feminism/index.html#sensitivity-analysis",
     "title": "Appendix : What do Young Men Oppose about Feminism?",
     "section": "Sensitivity Analysis",
-    "text": "Sensitivity Analysis\nCausal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.\nFor test such a key identification assumption, we can perform a sensitivity analysis. I use mediation package and probe the plausibility of this assumption."
+    "text": "Sensitivity Analysis\nCausal mediation analysis relies on the sequential ignorability assumption, which cannot be directly tested with observed data. This assumption implies that treatment is negligible if there are observed pretreatment confounders, and mediators are negligible if there are observed treatment and observed pretreatment covariates.\nFor test such a key identification assumption, we can perform a sensitivity analysis. I use mediation package and probe the plausibility of this assumption.\n\n–&gt;"
   }
 ]
